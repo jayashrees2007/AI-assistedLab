@@ -1,7 +1,9 @@
 """Calculate the arithmetic mean of a list of marks."""
 
+from typing import List, Union
 
-def calculate_average(marks: list[int | float]) -> float:
+
+def calculate_average(marks: List[Union[int, float]]) -> float:
     """Return the mean of marks, rejecting empty lists and invalid marks.
 
     Raises:
