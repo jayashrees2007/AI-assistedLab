@@ -1,0 +1,21 @@
+def factorial(number):
+    """Return the factorial of a non-negative integer."""
+    if number < 0:
+        raise ValueError("The number must be non-negative.")
+
+    result = 1
+    for value in range(2, number + 1):
+        result *= value
+    return result
+
+
+def main():
+    try:
+        number = int(input("Enter a non-negative integer: "))
+        print(f"{number}! = {factorial(number)}")
+    except ValueError as error:
+        print(f"Invalid input: {error}")
+
+
+if __name__ == "__main__":
+    main()
