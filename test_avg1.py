@@ -25,7 +25,7 @@ class CalculateAverageTests(unittest.TestCase):
             calculate_average([])
 
     def test_rejects_marks_below_zero_or_above_100(self):
-        for marks in ([-0.01], [100.01]):
+        for marks in ([-0.01], [100.01], [float("nan")], [float("inf")]):
             with self.subTest(marks=marks):
                 with self.assertRaises(ValueError):
                     calculate_average(marks)
